@@ -55,7 +55,9 @@ df = carregar_dados_limpos()
 gdf_geo = carregar_dados_geo()
 modelo = carregar_modelo()
 
-st.title("Previsão de preços de Imóveis.")
+st.title("Previsão de preços de Imóveis. :house:")
+st.header("California", divider="gray")
+
 
 condados = sorted(list(gdf_geo["name"].unique()))
 
