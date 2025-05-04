@@ -1,19 +1,29 @@
-# Modelo de projeto de ciência de dados
+# Projeto de Regressão com modelo Linear
 
-Modelo de projeto de ciência de dados para ser utilizado como referência em projetos
-futuros. Desenvolvido por mim, [Francisco Bustamante](https://github.com/chicolucio),
-para alunos iniciantes em ciência de dados de meus cursos e mentorias.
+## Previsão de preço de imóveis no estado da Califórnia
 
-Inspiração: [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
 
-Clique no botão **Use this template** para criar um novo repositório com base neste modelo.
+Origem: https://www.kaggle.com/datasets/camnugent/california-housing-prices/data
+
+Este conjunto de dados foi derivado do censo dos EUA de 1990, usando uma linha por grupo
+de blocos censitários. Um grupo de blocos é a menor unidade geográfica para a qual o
+Escritório do Censo dos EUA publica dados amostrais (um grupo de blocos geralmente tem
+uma população de 600 a 3.000 pessoas).
+
+Um domicílio (*household*) é um grupo de pessoas que reside em uma casa. Como o número
+médio de cômodos e quartos neste conjunto de dados é fornecido por domicílio, essas
+colunas podem apresentar valores surpreendentemente altos para grupos de blocos com
+poucos domicílios e muitas casas vazias, como em resorts de férias.
+
+A variável alvo é o valor mediano das casas para os distritos da Califórnia, expressa em
+dólares.
+
 
 ## Organização do projeto
 
 ```
-├── .env               <- Arquivo de variáveis de ambiente (não versionar)
 ├── .gitignore         <- Arquivos e diretórios a serem ignorados pelo Git
-├── ambiente.yml       <- O arquivo de requisitos para reproduzir o ambiente de análise
+├── requeriments.txt   <- O arquivo de requisitos para reproduzir o ambiente de análise
 ├── LICENSE            <- Licença de código aberto se uma for escolhida
 ├── README.md          <- README principal para desenvolvedores que usam este projeto.
 |
@@ -23,7 +33,7 @@ Clique no botão **Use this template** para criar um novo repositório com base 
 |
 ├── notebooks          <- Cadernos Jupyter. A convenção de nomenclatura é um número (para ordenação),
 │                         as iniciais do criador e uma descrição curta separada por `-`, por exemplo
-│                         `01-fb-exploracao-inicial-de-dados`.
+│                         `01-JN-exploracao-inicial-de-dados`.
 │
 |   └──src             <- Código-fonte para uso neste projeto.
 |      │
@@ -57,24 +67,6 @@ Clique no botão **Use this template** para criar um novo repositório com base 
     para o arquivo `requirements.txt` ou outro formato de sua preferência. Adicione o
     arquivo ao controle de versão, removendo o arquivo `ambiente.yml`.
 
-3. Verifique o arquivo `notebooks/01-fb-exemplo.ipynb` para exemplos
-de uso do código.
-4. Renomeie o arquivo `notebooks/01-fb-exemplo.ipynb` para um nome
-mais apropriado ao seu projeto. E siga a convenção de nomenclatura para os demais
-notebooks.
-5. Remova arquivos de exemplo e adicione os arquivos de dados e notebooks do seu
-projeto.
-6. Verifique o arquivo `notebooks/src/config.py` para configurações básicas do projeto.
-Modifique conforme necessário, adicionando ou removendo caminhos de arquivos e
-diretórios.
-7. Atualize o arquivo `referencias/01_dicionario_de_dados.md` com o dicionário de dados
-do seu projeto.
-8. Atualize o `README.md` com informações sobre o seu projeto.
-9. Adicione uma licença ao projeto. Clique
-[aqui](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-se precisar de ajuda para escolher uma licença.
-10. Renomeie o arquivo `.env.exemplo` para `.env`
-11. Adicione variáveis de ambiente sensíveis ao arquivo `.env`.
 
 Por padrão, o arquivo `.gitignore` já está configurado para ignorar arquivos de dados e
 arquivos de Notebook (para aqueles que usam ferramentas como
@@ -83,4 +75,3 @@ outros arquivos e diretórios do `.gitignore` conforme necessário. Caso deseje 
 forçadamente um Notebook ao controle de versão, faça um commit forçado com o
 comando `git add --force NOME_DO_ARQUIVO.ipynb`.
 
-Para mais informações sobre como usar Git e GitHub, [clique aqui](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/). Sobre ambientes virtuais, [clique aqui](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/).
