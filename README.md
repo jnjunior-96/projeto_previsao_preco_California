@@ -1,29 +1,48 @@
-# Projeto de Regressão com modelo Linear
-
-## Previsão de preço de imóveis no estado da Califórnia
+# Previsão de Preços de Imóveis na Califórnia com Regressão Linea
 
 
 Origem: https://www.kaggle.com/datasets/camnugent/california-housing-prices/data
 
-Este conjunto de dados foi derivado do censo dos EUA de 1990, usando uma linha por grupo
-de blocos censitários. Um grupo de blocos é a menor unidade geográfica para a qual o
-Escritório do Censo dos EUA publica dados amostrais (um grupo de blocos geralmente tem
-uma população de 600 a 3.000 pessoas).
+## Um pouco mais sobre a base
 
-Um domicílio (*household*) é um grupo de pessoas que reside em uma casa. Como o número
-médio de cômodos e quartos neste conjunto de dados é fornecido por domicílio, essas
-colunas podem apresentar valores surpreendentemente altos para grupos de blocos com
-poucos domicílios e muitas casas vazias, como em resorts de férias.
+Os dados provém de um censo do EUA de 1990, onde disponibiliza alguns dados sobre grupos de moradores da região e seus imóveis.
 
-A variável alvo é o valor mediano das casas para os distritos da Califórnia, expressa em
-dólares.
+[Clique aqui](referencias/01_dicionario_de_dados.md) para ver o dicionário de dados da base utilizado.
 
+## Etapas
+
+Este projeto tem como objetivo construir e avaliar modelos de regressão para prever o valor médio de imóveis no estado da Califórnia, com base em dados demográficos e geográficos provenientes do censo dos EUA de 1990. Foram aplicadas técnicas de análise exploratória, engenharia de atributos, visualização geográfica e modelagem preditiva.
+
+Para isso algumas etapas forma necessárias:
+
+- 📊 **EDA**: análise exploratória e tratamento inicial dos dados.
+- 🌍 **GeoPandas & Folium**: visualizações geográficas dos dados e agrupamento por localização.
+- 🔢 **Modelos de Regressão**: aplicação e avaliação de modelos como Regressão Linear, Ridge, Lasso e ElasticNet.
+- 📈 **Polynomial Features**: avaliação do impacto da transformação polinomial nas variáveis.
+- 🧪 **Regularização**: comparação entre os modelos com técnicas de regularização.
+- 🏁 **Modelo Final**: seleção do modelo com melhor desempenho e menor custo computacional (Ridge).
+
+- [EDA](notebooks/01-JN-EDA.ipynb): para tratamento e análise dos dados.
+- [GeoPandas e Foium](notebooks/03-JN-geo_parte_01.ipynb): para visualização e manipulação de dados geográficos.
+- [Modelos de Regressão](notebooks/04-JN-modelos-parte_01_inicio.ipynb): testando modelos de regressão e preprocessamentos.
+- [PolynomialFeatures](notebooks/05-JN-modelos-parte_PolynomialFeatures.ipynb): testando regressão polinomial.
+- [Regularização](notebooks/06-JN-modelos-parte_ElasticNet.ipynb): testando e comparando outros modelos e regularizações.
+- [Modelo escolhido](notebooks/07-JN-modelos-parte_Ridge.ipynb): modelo com melhor desempenho e menor penalização de processamento.
+
+
+## Streamlit
+
+Uma versão interativa do projeto foi publicada via Streamlit. Acesse o app clicando abaixo:
+
+👉 [Acesse o App de Previsão de Preços](https://projeto-previsao-preco-california.streamlit.app/)
+
+![App Previsão](relatorios/imagens/App%20Previsao%20Preco%20California.png)
 
 ## Organização do projeto
 
 ```
 ├── .gitignore         <- Arquivos e diretórios a serem ignorados pelo Git
-├── requeriments.txt   <- O arquivo de requisitos para reproduzir o ambiente de análise
+├── requirements.txt   <- O arquivo de requisitos para reproduzir o ambiente de análise
 ├── LICENSE            <- Licença de código aberto se uma for escolhida
 ├── README.md          <- README principal para desenvolvedores que usam este projeto.
 |
@@ -68,10 +87,13 @@ dólares.
     arquivo ao controle de versão, removendo o arquivo `ambiente.yml`.
 
 
-Por padrão, o arquivo `.gitignore` já está configurado para ignorar arquivos de dados e
-arquivos de Notebook (para aqueles que usam ferramentas como
-[Jupytext](https://jupytext.readthedocs.io/en/latest/) e similares). Adicione ou remova
-outros arquivos e diretórios do `.gitignore` conforme necessário. Caso deseje adicionar
-forçadamente um Notebook ao controle de versão, faça um commit forçado com o
-comando `git add --force NOME_DO_ARQUIVO.ipynb`.
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## 👤 Autor
+
+Desenvolvido por [José Nivaldo](https://www.linkedin.com/in/jnjunior96)  
+Entre em contato: jnjunior96@outlook.com
+
 
